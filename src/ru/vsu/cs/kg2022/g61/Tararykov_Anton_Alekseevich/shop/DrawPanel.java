@@ -11,18 +11,50 @@ public class DrawPanel extends JPanel {
         Graphics2D canvas = (Graphics2D) g;
 
         canvas.setColor(new Color(0x9A866B));
-        canvas.drawRect(0,0,1440,768);
-        canvas.fillRect(0,0,1440,768);
+        canvas.drawRect(0,0,1000,800);
+        canvas.fillRect(0,0,1000,800);
 
         //стеллаж
 
-        int x,y, height, width;
+        int heightShelving, widthShelving, bottomPoint;  //height - высота width - ширина
+
+        widthShelving = 900;
+        heightShelving = 650;
+        bottomPoint = 770;
+
 
         canvas.setColor(new Color(0x000000));
-        canvas.drawRect(80,128,1280,640);
-        canvas.fillRect(80,128,1280,640);
+        canvas.drawRect(50,120,widthShelving,heightShelving);
+        canvas.fillRect(50,120,widthShelving,heightShelving);
+
+        int heightBox, widthBox, distanceBetweenBoxes,x;
+        heightBox = 45;
+        widthBox = 168;
+        distanceBetweenBoxes = 10;
+        x=50;
+
+        for (int i = 0; i < 3; i++) {
+
+            canvas.setColor(new Color(0xFF0000));
+            canvas.drawRect(50,bottomPoint-30,widthShelving,30);
+            canvas.fillRect(50,bottomPoint-30,widthShelving,30);
+
+            for (int b = 0; b < widthShelving/(widthBox+12); b++) {
+
+                canvas.setColor(new Color(0x00FF0F));
+                canvas.drawRect(x+distanceBetweenBoxes, bottomPoint - 30 -heightBox, widthBox, heightBox);
+                canvas.fillRect(x+distanceBetweenBoxes, bottomPoint - 30 -heightBox, widthBox, heightBox);
+
+                x +=widthBox+distanceBetweenBoxes;
+            }
+            bottomPoint -= 250;
+            x=50;
+
+        }}
+
+
+
+
 
     }
 
-
-}
