@@ -27,6 +27,17 @@ public class DrawPanel extends JPanel {
         canvas.drawRect(50,120,widthShelving,heightShelving);
         canvas.fillRect(50,120,widthShelving,heightShelving);
 
+        //тыква
+
+        canvas.setColor(new Color(0xC2965A));
+        canvas.drawOval(10,10,100,60);
+        canvas.fillOval(10,10,100,60);
+        canvas.setColor(new Color(0x331B0F));
+        canvas.fillOval(47,10,26,10);
+        canvas.drawOval(47,10,26,10);
+
+        //ящики
+
         int heightBox, widthBox, distanceBetweenBoxes,x;
         heightBox = 45;
         widthBox = 168;
