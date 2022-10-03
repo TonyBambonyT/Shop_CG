@@ -8,6 +8,7 @@ public class DrawPanel extends JPanel {
     private final Pumpkin p = new Pumpkin();
     private final Background b = new Background();
     private final Shelf s = new Shelf();
+    private final Cabbage c = new Cabbage();
 
     @Override
     protected void paintComponent(Graphics g) {
@@ -16,11 +17,8 @@ public class DrawPanel extends JPanel {
         Graphics2D canvas = (Graphics2D) g;
 
         b.draw(canvas); //задний фон
-
-        for (int i = 0; i < (int) (Math.random() * 9); i++) {
-            p.draw(canvas);                                     //тыква
-        }
-
+        for (int i = 1; i < (int) (Math.random() * 9); i++) {p.draw(canvas);}   //тыква
+        for (int i = 1; i < (int) (Math.random() * 10); i++) {c.draw(canvas);}   //капуста
         s.draw(canvas); //стеллаж
 
 
