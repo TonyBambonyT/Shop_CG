@@ -8,10 +8,10 @@ public class Pumpkin {
 
     public void draw(Graphics2D g) {
 
-            heightPumpkin = 50+(int) (Math.random() * 60);
-            widthPumpkin = 90+(int) (Math.random() * 100);
-            xPumpkin = 65+(int) (Math.random() * 100);
-            yPumpkin = 190+(int) (Math.random() * 100);
+            heightPumpkin = 60+(int) (Math.random() * 60);
+            widthPumpkin = 100+(int) (Math.random() * 50);
+            xPumpkin = 65+(int) (Math.random() * 10);
+            yPumpkin = 140+(int) (Math.random() * 10);
             g.setColor(new Color(0xFF8800));
             g.fillOval(xPumpkin, yPumpkin, widthPumpkin, heightPumpkin);
             g.setColor(new Color(0x000000));
