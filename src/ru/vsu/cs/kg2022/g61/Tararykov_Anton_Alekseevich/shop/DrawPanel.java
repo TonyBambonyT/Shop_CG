@@ -2,8 +2,13 @@ package ru.vsu.cs.kg2022.g61.Tararykov_Anton_Alekseevich.shop;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class DrawPanel extends JPanel {
+
+    private Pumpkin p = new Pumpkin();
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -27,14 +32,9 @@ public class DrawPanel extends JPanel {
         canvas.drawRect(50,120,widthShelving,heightShelving);
         canvas.fillRect(50,120,widthShelving,heightShelving);
 
-        //тыква
+        //p.draw(canvas); //тыква
 
-        canvas.setColor(new Color(0xC2965A));
-        canvas.drawOval(10,10,100,60);
-        canvas.fillOval(10,10,100,60);
-        canvas.setColor(new Color(0x331B0F));
-        canvas.fillOval(47,10,26,10);
-        canvas.drawOval(47,10,26,10);
+
 
         //ящики
 
@@ -61,6 +61,10 @@ public class DrawPanel extends JPanel {
             bottomPoint -= 250;
             x=50;
 
+        }
+
+        for (int i = 0; i < (int) (Math.random() * 9); i++) {
+            p.draw(canvas);
         }}
 
 
